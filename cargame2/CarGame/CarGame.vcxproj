@@ -20,6 +20,7 @@
     <ClCompile Include="CarGameCode\Logic\GameObjects\Meta.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\GameObject.cpp" />
     <ClCompile Include="CarGameCode\Logic\GameObjects\Collider.cpp" />
+    <ClCompile Include="CarGameCode\Logic\GameObjectContainer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CarGameCode\Control\ViewController.h" />
@@ -34,6 +35,7 @@
     <ClInclude Include="CarGameCode\Logic\GameObjects\Meta.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\GameObject.h" />
     <ClInclude Include="CarGameCode\Logic\GameObjects\Collider.h" />
+    <ClInclude Include="CarGameCode\Logic\GameObjectContainer.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{28A4C5CD-307A-4FE6-81E4-4CE1F1E49AB4}</ProjectGuid>

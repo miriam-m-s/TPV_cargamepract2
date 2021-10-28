@@ -4,15 +4,18 @@
 
 #ifndef CARGAME_CAR_H
 #define CARGAME_CAR_H
+#include "GameObject.h";
 
 
-class Game;
 
 #include "../../Utils/Vector2D.h"
 #include "../../View/Texture.h"
 #include "../../View/Box.h"
 
-class Car {
+
+    class Car:public GameObject 
+    {
+        
 
 private:
 
@@ -26,39 +29,24 @@ private:
     bool up=false, down=false,acel=false,fren=false;
     bool colision = false;
     int vidas=INITIAL_POWER;
-    Point2D<double> pos;
-    int w, h;
-    Game *game;
-    Texture *texture;
+  
 
 
 public:
-    Car(Game *game);
-    ~Car() { 
-  
-    }
-    void draw();
+    Car(Game * game);
+    void draw()override;
     void reiniciacar() {
         vidas = INITIAL_POWER;
     }
     void update();
-    void drawTexture(Texture* texture);
     void moveup(bool h);
     void movedown(bool h);
     void acelerate(bool h);
     void frenar(bool h);
     void Chocar();
-    void setDimension(int width, int height);
     int Vidas() { return vidas; }
     double Velocidad() { return speed; }
-    double getX() {return pos.getX();};
-    double getY() {return pos.getY();};
-    int getWidth() {return w;};
-    int getHeight() {return h;};
 
-    void setPosition(double x, double y);
-
-    SDL_Rect getCollider();
 };
 
 

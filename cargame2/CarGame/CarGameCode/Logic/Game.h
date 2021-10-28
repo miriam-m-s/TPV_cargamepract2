@@ -19,12 +19,14 @@
 #include "GameObjects/Meta.h"
 
 
+
 using namespace std;
 
 class Game{
 
     
 private:
+ 
     string name;
     bool doExit;
     const int nroc = 20;

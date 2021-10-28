@@ -24,12 +24,12 @@ void Game::startGame() {
     car->setPosition(car->getWidth(), height/ 2.0);
     srand(time(NULL));
     for (int i = 0; i < roc.size(); i++) {
-        //crear las piedras
-        roc[i] = new Rocks(this);
-        roc[i]->setDimension(ROCKS_WIDTH, ROCKS_HEIGHT);
-        setrandomposition(i);
+       //crear las piedra+s
+       roc[i] = new Rocks(this);
+      roc[i]->setDimension(ROCKS_WIDTH, ROCKS_HEIGHT);
+       setrandomposition(i);
     }
-    //crear la meta
+    ////crear la meta
     metafin = new Meta(this);
     metafin->setDimension(META_WIDTH, META_HEIGHT);
     metafin->setPosition(roadLength, height / 2.0);
@@ -95,8 +95,8 @@ Game::~Game() {
 }
 
 void Game::update(){    
-    Colisiones();
-    eliminarpiedras();
+   Colisiones();
+   eliminarpiedras();
     car->update();  
 }
 void Game::eliminarpiedras() {
@@ -165,9 +165,9 @@ void Game::Menu() {
 void Game::draw(){ 
         car->draw();
         drawInfo();
-    for (int i = 0; i <roc.size(); i++) {
+   for (int i = 0; i <roc.size(); i++) {
         if ( roc[i]!= nullptr)
-       roc[i]->draw(car->getX());
+       roc[i]->draw();
     }
     metafin->draw();
 }

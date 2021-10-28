@@ -4,21 +4,11 @@
 
 #include "Car.h"
 #include "../Game.h"
-
-Car::Car(Game *game){
-    this->game = game;
-    texture = nullptr;
-
+Car::Car(Game* game) : GameObject(game)
+{
+    if (game == nullptr)cout << "go null game";
 }
 
-void Car::setDimension(int width, int height){
-    w = width;
-    h = height;
-};
-
-void  Car::setPosition(double x, double y){
-    pos = Point2D<double>(x, y);
-};
 void Car::moveup(bool h) {
     up = h;
 }
@@ -59,7 +49,7 @@ void Car::update() {
     }  
     //FRENA
     else if (fren) speed *= DECELERATION;
-    pos = Point2D<double>(getX() + 1*speed, getY()+ejey);
+    setPosition(getX() + speed, getY() + ejey);
    
 }
 
@@ -69,20 +59,6 @@ void Car::draw() {
 }
 
 
-void Car::drawTexture(Texture *texture) {
-    int dX = game->getOrigin().getX();//1
-    int dY = game->getOrigin().getY();//0
-
-    SDL_Rect c = getCollider();
-    SDL_Rect textureBox = { c.x + dX, c.y + dY, c.w, c.h};
-    texture->render(textureBox);
-}
 
 
-SDL_Rect Car::getCollider(){
-    //forma un cuadrado
-    return { int(getX() - getWidth()),
-             int(getY() - getHeight()/2),
-             getWidth(),
-             getHeight()};
-}
+

@@ -1,16 +1,2 @@
-﻿  ViewController.cpp
-  Game.cpp
-C:\Users\miria\Downloads\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(25,15): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\miria\Downloads\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(26,23): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\miria\Downloads\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(83,23): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\miria\Downloads\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(103,23): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\miria\Downloads\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(114,14): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\miria\Downloads\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(135,23): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\miria\Downloads\CarGame_template_v0\CarGame\CarGameCode\Logic\Game.cpp(168,23): warning C4018: '<': no coinciden signed/unsigned
-  Car.cpp
-  Main.cpp
-  Texture.cpp
-  Rocks.cpp
-  Meta.cpp
-  Generando código...
-  CarGame.vcxproj -> C:\Users\miria\Downloads\CarGame_template_v0\bin\CarGamePr1Debug.exe
+﻿  GameObjectContainer.cpp
+  CarGame.vcxproj -> C:\tpv\cargame2\bin\CarGamePr1Debug.exe

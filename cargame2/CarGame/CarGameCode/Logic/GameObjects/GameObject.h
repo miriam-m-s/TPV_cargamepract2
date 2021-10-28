@@ -9,7 +9,7 @@
 #include "Collider.h"
 class Game;
 
-class GameObject : public Collider {
+class GameObject  {
 
     Point2D<double> pos;
     int w, h;
@@ -21,7 +21,7 @@ protected:
     void drawTexture(Texture* texture);
 public:
 
-    GameObject(Game* game) : game(game) {};
+    GameObject(Game* game);
     virtual ~GameObject() {};
 
     virtual void draw() = 0;
@@ -41,7 +41,7 @@ public:
     int getX() { return pos.getX(); };
     int getY() { return pos.getY(); };
     virtual SDL_Rect getCollider();
-    virtual SDL_Rect getCenter();
+    //virtual SDL_Rect getCenter();
 
     bool collide(SDL_Rect other);
 };
